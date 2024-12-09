@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A PROPOS | Enactus fsbm </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styleactivities.css">
+    <link rel="icon" href="../assets/images/logo - enactus - or.png" type="image/x-icon">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+       body {
+           font-family: 'Poppins', sans-serif;
+           background-color: #fffaf0 ;
+       }
+
+       .banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            background: url('../assets/images/photopj.JPG') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 24px;
+            font-weight: bold;
+            flex-direction: column;
+            text-align: center;
+            cursor: pointer;
+            text-shadow: #FFC222;
+       }
+
+       .banner h1 {
+            font-size: 4rem;
+            font-weight: 700; 
+            text-transform: uppercase;
+            color: #fffaf0;
+            margin-top: 20px;  /* Décalage vers le bas */
+        }
+       .quinous{
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 88%);
+            background-color: black;
+            margin-top: -30px;
+            height: 400px;
+       }
+        .slogan {
+            font-size: 36px;
+            color: black;
+            text-align: center;
+            margin: 30px 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            animation: glow 1.5s ease-in-out infinite, move 3s ease-in-out infinite;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px 0 #FFC222, 0 0 10px #FFC222, 0 0 15px #FFC222; color: #fffaf0; }
+            50% { text-shadow: 0 0 20px #FFC222, 0 0 30px #FFC222; color: #FFC222; }
+            100% { text-shadow: 0 0 5px #FFC222, 0 0 10px #FFC222; color: #FFC222; }
+        }
+
+        @keyframes move {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .logowhite{
+            float: left;
+            height: 150px;
+            weight: 150px;
+        }
+        .new-paragraph{
+            color: #fffaf0;
+            margin-top: 60px;
+            margin-right: 90px;
+            margin-left: 400px;
+            font-weight: 20px;
+        }
+        .highlight-box {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 215, 0, 0.1);
+            padding: 10px;
+            margin: 10px;
+            border-left: 4px solid #FFD700;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 45%;  
+            height: 150px; 
+            box-sizing: border-box;
+            background-color: black;
+        }
+
+        .highlight-box:hover {
+            background-color: rgba(255, 215, 0, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .highlight-box img {
+            width: 23%; 
+            height: auto;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .highlight-box h3 {
+            color: #FFC222;
+            font-size: 18px; 
+            margin-bottom: 10px;
+        }
+
+        .highlight-box p {
+            font-size: 14px; 
+            line-height: 1.4;
+            color: white;
+        }
+        .highlight-box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .highlight{
+            margin: 70px;
+        }
+        .us{
+            float: right;
+            height: 600px;
+            width: 600px;
+            margin-top: -500px;
+            margin-left: 100px;
+        }
+        .us1{
+            height: 350px;
+            width: 350px;
+            margin-left: 20px;
+        }
+        .us2{
+            height: 350px;
+            width: 350px;
+            margin-left: 300px;
+            margin-top: -100px;
+            margin-right: 20px;
+
+        }
+        .impact-section {
+    background-color: #000; 
+    color: #fff; 
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.impact-section h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color:#FFC222;
+    font-family: poppins;
+}
+
+.statistics-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat-box {
+    background-color: #111; 
+    border: 1px solid #444;
+    padding: 20px;
+    border-radius: 10px;
+    width: 28%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.stat-box:hover {
+    background-color: #222; 
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFC222; 
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.6;
+}     
+
+.navbar {
+    background-color: #000; /* Noir */
+    box-shadow: 0 4px 8px 0 #FFC222; /* Ombre */
+    padding: 10px 40px; /* Plus large */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logoimg {
+    height: 70px; /* Taille augmentée pour le logo */
+    margin-left: 10px; /* Éloigner du bord gauche */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff; /* Couleur des liens */
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    margin-right: 20px; /* Éloigner du bord droit */
+    transition: color 0.3s;
+    position: relative;
+    font-size: 14px; /* Taille réduite du texte */
+    font-weight: bold; /* Texte en gras */
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFC222; /* Couleur de survol des liens */
+    z-index: -1;
+    transition: transform 0.3s;
+    transform: scaleX(0);
+    transform-origin: left;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.nav-links a:hover::before {
+    transform: scaleX(1);
+}
+
+.nav-links a:hover {
+    color: #000; /* Couleur du texte lors du survol */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000; /* Noir */
+    box-shadow: 0 4px 8px 0 #FFC222; /* Ombre */
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #fff; /* Couleur des liens du dropdown */
+}
+
+.dropdown-content a:hover {
+    background-color: #FFC222; /* Couleur de survol des liens du dropdown */
+    color: #000; /* Couleur du texte lors du survol */
+}
+footer {
+             background:url("../assets/images/footf.png") ;
+            color: white; /* Texte blanc */
+            font-family: 'Poppins', sans-serif; /* Applique la police Poppins */
+        }
+
+        .footerContainer {
+            width: 100%;
+            padding: 70px 30px 20px;
+            display: flex;
+            justify-content: center; /* Centrer horizontalement */
+            align-items: center;
+            flex-wrap: wrap; /* Pour l'adaptabilité sur mobile */
+        }
+
+        /* Section des icônes sociales */
+        .socialIcons {
+            display: flex;
+            justify-content: center; /* Centrer horizontalement */
+            align-items: center; /* Centrer verticalement */
+        }
+
+        .socialIcons a {
+            text-decoration: none;
+            padding: 15px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .socialIcons a i {
+            font-size: 2em;
+            color: #111;
+        }
+
+        /* Hover affect sur les icônes */
+        .socialIcons a:hover {
+            background-color: #FFC222;
+        }
+
+        .socialIcons a:hover i {
+            color: #fff; /* Change la couleur de l'icône au survol */
+        }
+
+        /* Section du bas du footer */
+        .footerNav {
+            margin: 30px 0;
+        }
+
+        .footerNav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        .footerNav ul li a {
+            color: white;
+            margin: 20px;
+            text-decoration: none;
+            font-size: 1.3em;
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+
+        .footerNav ul li a:hover {
+            opacity: 1;
+        }
+
+        .footerBottom {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+            font-style: bold;
+            color: #FFC222;
+        }
+
+        .footerBottom p {
+            font-style: bold ;
+            color: #FFC222;
+        }
+
+        .designer {
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+            margin: 0px 5px;
+        }
+
+        @media (max-width: 700px) {
+            .footerNav ul {
+                flex-direction: column;
+            }
+
+            .footerNav ul li {
+                width: 100%;
+                text-align: center;
+                margin: 10px;
+            }
+
+            .socialIcons a {
+                padding: 12px;
+                margin: 5px;
+            }
+        }
+   </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../pages/index.html"><img class="logoimg" src="../assets/images/Logo white.png" alt=""></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../pages/index.html">Accueil</a></li>
+            <li class="dropdown">
+                <a href="#">Qui sommes-nous</a>
+                <div class="dropdown-content">
+                    <a href="../pages/about.html">À propos de nous</a>
+                    <a href="../pages/equipe.html">Notre équipe</a>
+                    <a href="../pages/partenaires.html">Nos partenaires</a>
+                    <a href="../pages/mission.html">Notre mission</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Que faisons-nous</a>
+                <div class="dropdown-content">
+                    <a href="../pages/achievements.html">Achievements</a>
+                    <a href="../pages/projets.html">Projets</a>
+                    <a href="../pages/activites.html">Activités</a>
+                </div>
+            </li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="banner">
+        <h1>A Propos de nous</h1>
+    </section>
+    <section class="quinous">
+        <br>
+        <div class="slogan">
+        FROM FRACTURES TO MASTERPIECES
+        </div>
+        <img class="logowhite" src="../assets/images/Logo white.png">
+        <div class="new-paragraph">
+            <p><strong>Enactus</strong>est un réseau mondial qui inspire les jeunes à utiliser l'entrepreneuriat pour résoudre les défis sociaux et économiques. </br>
+            <br><strong>Enactus Maroc</strong>, fondé en 2003, permet aux étudiants de réaliser des projets innovants et de créer un impact direct dans leur communauté.</br>
+            Découvrez comment cette initiative transforme des idées en actions concrètes !</p>
+        </div>
+    </section>
+    <section class="highlight">
+    <div class="highlight-box">
+        <img src="../assets/images/cadre2.jpg" alt="Rôles et Responsabilités">
+        <div>
+            <h3>Rôles et Responsabilités</h3>
+            <p>Les membres du groupe occupent des rôles variés tels que la recherche, le marketing et le design pour assurer le succès des projets et développer leurs compétences.</p>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <img src="../assets/images/cadre3.jpg" alt="Engagement et Dévouement">
+        <div>
+            <h3>Engagement et Dévouement</h3>
+            <p>Les membres de l'équipe sont pleinement engagés à atteindre leurs objectifs ambitieux pour améliorer la vie des autres à travers leur temps et leurs efforts.</p>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <img src="../assets/images/cadre1.JPG" alt="Ambiance de Travail">
+        <div>
+            <h3>Ambiance de Travail</h3>
+            <p>L'environnement de travail au sein de l'équipe est rempli de défis et d'inspiration, favorisant la collaboration et la créativité pour atteindre le succès collectif.</p>
+        </div>
+    </div>
+    <div class="us">
+        <img class="us1" src="../assets/images/Us1.jpg" >
+        <img class="us2" src="../assets/images/Us2.jpg" >
+    </div>
+    </section>
+    <section class="impact-section">
+        <h2>LES IMPACTS DE NOS ACTIONS</h2>
+        <div class="statistics-container">
+            <div class="stat-box">
+                <span class="stat-value">+1000</span>
+                <p>Jeunes Mobilisés : Étudiants Impactés</p>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">+40</span>
+                <p>Projets Développés : Projets Réalisés</p>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">+500</span>
+                <p>Bénéficiaires Impactés : Personnes</p>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">+3000</span>
+                <p>Heures De Formations Et D’Accompagnement Dispensées</p>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">13</span>
+                <p>Objectifs Du Développement Durable Touchés</p>
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.instagram.com/3nac1us.fsbm?igsh=YWcyaGQyOGMzNzJo" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href=" https://www.tiktok.com/@enactus.fsbmposting" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.linkedin.com/company/enactus-fsbmc/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:enactus24.25fsbm@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="footerBottom">
+            <p>Copyright &copy;2024 enactus fsbm </p>
+        </div>
+    </footer>
+    
+</body>
+</html>
